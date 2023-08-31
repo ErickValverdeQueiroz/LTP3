@@ -1,0 +1,34 @@
+using System;
+
+namespace exercicio
+{
+    class User 
+    {
+        static void Main(string[] args)
+        {
+        
+            Console.Write("Insira seu nome completo: ");
+            string nomeCompleto = Console.ReadLine();
+
+            Console.Write("Insira sua idade: ");
+            string idadeStr = Console.ReadLine();
+
+            int idade = Convert.ToInt32(idadeStr);
+            int anoAtual = 2023;
+            int anoNascimento = anoAtual - idade;
+
+            Console.WriteLine($"Nome em maiusculas: {nomeCompleto.ToUpper()}");
+            Console.WriteLine($"Nome em minusculas: {nomeCompleto.ToLower()}");
+            
+            int numeroCaracteres = nomeCompleto.Replace(" ", "").Length;
+            Console.WriteLine($"Número de caracteres no nome: {numeroCaracteres}");
+            
+            int idadeCemAnos = 100 - idade;
+            int anoCemAnos = anoAtual + idadeCemAnos;
+            Console.WriteLine($"Ano de nascimento: {anoNascimento}");
+            Console.WriteLine($"Idade em que fara 100 anos: {idadeCemAnos}");
+            Console.WriteLine($"Ano em que fara 100 anos: {anoCemAnos}");
+        }
+    }
+}
+
